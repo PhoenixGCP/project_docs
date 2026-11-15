@@ -1,0 +1,389 @@
+==============================================================================
+                     PHOENIX x DATAQUAINT: DISCOVERY CALL
+                              Call transcript
+==============================================================================
+
+Date ........ Friday, 13 November 2026
+Time ........ 12:30 - 13:20 IST (about 50 minutes)
+Medium ...... Phone call
+Project ..... Phoenix Online (new e-commerce platform)
+
+PARTICIPANTS
+  PHOENIX ..... Phoenix owner (founder, Phoenix electronics store, Hyderabad)
+  DATAQUAINT .. DataQuaint lead (Solutions and DevOps lead)
+
+------------------------------------------------------------------------------
+PART 1: OPENING AND THE BUSINESS
+------------------------------------------------------------------------------
+
+[00:00] DATAQUAINT:
+  Good afternoon, and thanks for making the time! Congratulations on taking
+  Phoenix online. Before we get anywhere near technology, I'd like to
+  understand your business, so whatever we build fits how you actually work.
+  Can we start with the basics?
+
+[00:18] PHOENIX:
+  Good afternoon, and thank you. Sure.
+
+[00:21] DATAQUAINT:
+  What does Phoenix sell, roughly how many products, and how many stores do
+  you run today?
+
+[00:29] PHOENIX:
+  We sell electronics, mobile phones and home appliances. Think of a business
+  like Croma, but smaller. We carry around 30 products, and right now we
+  operate one store, here in Hyderabad.
+
+[00:45] DATAQUAINT:
+  And who will your online customers be? Hyderabad, all of India, or further?
+
+[00:51] PHOENIX:
+  Mostly young people. We'll start by selling across India, and later the goal
+  is to take the business to the rest of the world.
+
+[01:03] DATAQUAINT:
+  Exciting. What kind of volume are you expecting?
+
+[01:07] PHOENIX:
+  About 50 sales a day to begin with. Over the year we want to grow to a huge
+  number. And yes, there are big spikes during the festivals.
+
+[01:19] DATAQUAINT:
+  And when would you like to go live?
+
+[01:22] PHOENIX:
+  By this Christmas.
+  ...Did I answer all your questions? If not, please come back to me.
+
+------------------------------------------------------------------------------
+PART 2: PLAYING IT BACK, AND THE FIRST PUSH-BACK
+------------------------------------------------------------------------------
+
+[01:30] DATAQUAINT:
+  You did, thank you. Let me play it back so we're on the same page:
+  electronics, mobiles and appliances, about 30 products, one store in
+  Hyderabad, mostly young customers, India first and global later, around 50
+  orders a day at launch with festive spikes, and live by Christmas.
+  Is that right?
+
+[01:48] PHOENIX:
+  Yes, exactly.
+
+[01:50] DATAQUAINT:
+  Two things I need to pin down. First, "huge" tells me your ambition, but I
+  can't size a system for "huge". In a year, are we talking 500 orders a day?
+  5,000? And on a festival day, how much busier than normal? 5 times? 10
+  times?
+
+[02:08] PHOENIX:
+  The target would be 500 orders a day. During festive sales, we expect 5 to
+  10 times more.
+
+[02:16] DATAQUAINT:
+  Perfect, that I can design for. Second, the timeline. Christmas is about
+  six weeks away, which is tight for a full e-commerce platform built from
+  scratch. Would you be comfortable launching a lean first version by
+  Christmas: catalogue, cart, checkout, payment. Then adding offers, reviews
+  and recommendations in later releases?
+
+[02:36] PHOENIX:
+  I'm comfortable with the lean first version.
+
+------------------------------------------------------------------------------
+PART 3: PAYMENTS, STOCK, DELIVERY
+------------------------------------------------------------------------------
+
+[02:40] DATAQUAINT:
+  Great. How should customers pay: UPI, cards, net banking, Cash on Delivery,
+  EMI?
+
+[02:47] PHOENIX:
+  Initially, Cash on Delivery only.
+
+[02:50] DATAQUAINT:
+  Should the website and your store share one stock count? So we never sell a
+  phone online that was just sold at the counter?
+
+[02:58] PHOENIX:
+  Yes. The inventory is the same for the store and the site.
+
+[03:02] DATAQUAINT:
+  And delivery: your own team, or a courier partner? Would you like "order
+  online, pick up in store"?
+
+[03:09] PHOENIX:
+  Initially we deliver ourselves. And yes, customers can also choose to pick
+  up in store.
+
+[03:15] DATAQUAINT:
+  Last one for now: do you have developers in-house, or are we building the
+  application as well as the platform?
+
+[03:21] PHOENIX:
+  You should build the application and the platform, from scratch.
+
+[03:26] DATAQUAINT:
+  Understood. Going Cash-on-Delivery-only for launch is a smart call: no
+  payment gateway and no card-data compliance to handle in six weeks. We'll
+  still design checkout so UPI or cards can plug in later without a rewrite.
+
+------------------------------------------------------------------------------
+PART 4: PLOT TWIST #1
+------------------------------------------------------------------------------
+
+[03:40] DATAQUAINT:
+  How do you bill customers and track stock in the store today? A billing
+  software, Excel, something else?
+
+[03:47] PHOENIX:
+  It's a manual billing system. We don't have any billing software. We need
+  one for the store too, with a database, and it should work the same for
+  online and offline.
+
+[04:00] DATAQUAINT:
+  Okay, noted. Who on your side will add products and manage orders?
+
+[04:04] PHOENIX:
+  Our staff will add products through the admin panel, so they need access.
+
+[04:09] DATAQUAINT:
+  For customer login, is phone number plus OTP enough? And how should
+  customers hear about their orders: SMS, WhatsApp, email?
+
+[04:16] PHOENIX:
+  Phone number and OTP is fine. Order updates by email.
+
+[04:20] DATAQUAINT:
+  If the site goes down for an hour, how much does that hurt?
+
+[04:24] PHOENIX:
+  Downtime is not acceptable. We expect zero downtime.
+
+[04:28] DATAQUAINT:
+  Any budget in mind for hosting?
+
+[04:31] PHOENIX:
+  Budget is not a constraint.
+
+[04:33] DATAQUAINT:
+  And the brand: do you own a domain, a logo, brand colours?
+
+[04:37] PHOENIX:
+  We don't have a domain yet. We can buy one. You design the logo and brand
+  colours. You have full liberty.
+
+[04:44] DATAQUAINT:
+  [pause]
+  Thank you. This is the clearest picture yet, but three of those answers
+  change the plan, so let me be upfront.
+
+  One: the store billing system is a whole new module. We'd build one backend
+  and one database for the website, a billing screen at your counter, and the
+  admin panel. But it's a lot for six weeks. If only one can be fully ready
+  by Christmas, I'd suggest the online store first, and billing in early
+  January.
+
+  Two: zero downtime. Honestly, nobody guarantees 100%, not Amazon, not
+  Google. What I can commit to is zero-downtime releases, so new features
+  never take the site down, and a 99.9% availability target. That's less
+  than about 45 minutes of unplanned downtime a month. Would 99.9% work as
+  our written target?
+
+  Three: OTP login means we need an SMS provider, and since updates go by
+  email, we'll ask for the customer's email at their first checkout.
+
+------------------------------------------------------------------------------
+PART 5: PLOT TWIST #2
+------------------------------------------------------------------------------
+
+[05:40] PHOENIX:
+  Okay, quick change. Forget about the offline store. We're giving it up.
+
+[05:45] DATAQUAINT:
+  That's a big decision. So Phoenix becomes a pure online business?
+
+[05:49] PHOENIX:
+  Yes.
+
+[05:50] DATAQUAINT:
+  That actually simplifies things a lot: no billing system, no store pickup,
+  and the stock lives entirely in the website and admin panel. Christmas just
+  got a lot safer.
+  Two follow-ups. Where will the stock be kept and shipped from?
+
+[06:04] PHOENIX:
+  Our offline store will act as the warehouse.
+
+[06:07] DATAQUAINT:
+  And delivery. Earlier you said you'd deliver yourselves, and also sell
+  across India. Without the store, your team can't realistically drive to
+  Delhi or Kolkata. Would you prefer Hyderabad only at first, a courier for
+  all of India, or a mix?
+
+[06:20] PHOENIX:
+  Launch in Hyderabad, but sell India-wide too, and partner with DHL. Own
+  delivery in Hyderabad, courier everywhere else.
+
+[06:28] DATAQUAINT:
+  Then let me suggest we phase it: at Christmas we launch in Hyderabad with
+  your own delivery, and shortly after, in Phase 2, we open India-wide with
+  DHL. That keeps the DHL integration out of the first six weeks.
+
+[06:41] PHOENIX:
+  That works.
+
+------------------------------------------------------------------------------
+PART 6: WRAP-UP
+------------------------------------------------------------------------------
+
+[06:43] DATAQUAINT:
+  Wonderful. Let me summarise, and stop me if anything's wrong.
+  Phoenix goes online-only, and the Hyderabad store becomes the warehouse.
+  We launch a lean version by Christmas: catalogue, search, cart, Cash on
+  Delivery checkout, phone and OTP login, email order updates, and an admin
+  panel for your staff. Hyderabad first with your own delivery, then India
+  with DHL in Phase 2. We design for 500 orders a day with 5 to 10 times
+  festival peaks, 99.9% availability and zero-downtime releases. We build
+  the app and the platform, and we'll come back with a logo, colours and
+  domain options.
+
+[07:20] PHOENIX:
+  Yes, that's it.
+
+[07:22] DATAQUAINT:
+  Thank you so much. I'll send the Requirements and Scope document for your
+  sign-off, with a few remaining questions.
+
+[07:28] PHOENIX:
+  Thank you. Looking forward to it.
+
+                               [CALL ENDS]
+
+==============================================================================
+FOLLOW-UP CALL: OPEN QUESTIONS AND SIGN-OFF
+13 November 2026, 12:59 - 13:16 IST
+==============================================================================
+
+[00:00] DATAQUAINT:
+  Thanks for reviewing the document. A few quick questions to close it out.
+  How many staff need admin access?
+
+[00:05] PHOENIX:
+  Three staff, all with admin permission.
+
+[00:08] DATAQUAINT:
+  Which Hyderabad pin codes will your delivery team cover?
+
+[00:11] PHOENIX:
+  500001 to 501401.
+
+[00:14] DATAQUAINT:
+  Is there a maximum order value for Cash on Delivery?
+
+[00:17] PHOENIX:
+  One lakh.
+
+[00:19] DATAQUAINT:
+  Your cancellation and return policies?
+
+[00:21] PHOENIX:
+  Customers can cancel within 3 hours, and return within 7 days.
+
+[00:25] DATAQUAINT:
+  Should the system generate GST invoices?
+
+[00:27] PHOENIX:
+  Yes.
+
+[00:28] DATAQUAINT:
+  When will product data, images and prices be ready?
+
+[00:31] PHOENIX:
+  Immediately. How do you want them? As an Excel sheet?
+
+[00:34] DATAQUAINT:
+  Excel is perfect. We'll send a template: one row per product with SKU,
+  name, category, brand, description, specs, price including GST, MRP, stock,
+  HSN code, GST rate and warranty. Images go in a separate folder, named by
+  SKU. And because we're generating GST invoices, we'll also need your GSTIN
+  and registered business address.
+
+[00:52] PHOENIX:
+  What about the GST number and the address?
+
+[00:55] DATAQUAINT:
+  They don't block sign-off, but we need them before invoice testing, by
+  4 December. The GSTIN goes on every invoice and decides how the tax is
+  split. Since all launch orders are inside Telangana, that's CGST plus SGST.
+  The address goes on invoices too, and it's your warehouse address.
+
+[01:12] PHOENIX:
+  The registered address is Flat 301, Mayur Heights, Ameerpet, Hyderabad
+  500016. For the GST number, put any number for now.
+
+[01:20] DATAQUAINT:
+  Done. We'll use a sample GSTIN until you send the real one. Can you confirm
+  DHL India-wide as Phase 2, not day one?
+
+[01:26] PHOENIX:
+  Yes.
+
+[01:27] DATAQUAINT:
+  And the brand?
+
+[01:29] PHOENIX:
+  phoenixskies.com. The logo should be a small phoenix bird, with red,
+  phoenix-inspired brand colours.
+
+[01:35] DATAQUAINT:
+  Lovely. Then that's everything. Do you approve the Requirements and Scope?
+
+[01:39] PHOENIX:
+  Approved.
+
+[01:40] DATAQUAINT:
+  Fantastic. Thank you! We start design straight away.
+
+                               [CALL ENDS]
+
+==============================================================================
+DECISIONS
+==============================================================================
+
+  Business ........ Online-only; the Ameerpet store becomes the warehouse
+  Catalogue ....... About 30 products: mobiles, electronics, home appliances
+  Customers ....... Mostly young buyers; Hyderabad -> India -> world
+  Scale ........... 50 orders/day at launch -> 500/day; festival peaks 5-10x
+  Go-live ......... Lean MVP by Christmas 2026
+  Payment ......... Cash on Delivery only; limit Rs 1,00,000 per order
+  Login ........... Phone number + OTP (SMS)
+  Notifications ... Email, with the GST invoice attached
+  Delivery ........ Own team in Hyderabad (pin codes 500001-501401);
+                    DHL India-wide in Phase 2
+  Policies ........ Cancel within 3 hours; return within 7 days of delivery
+  Invoicing ....... GST invoice for every order (CGST + SGST at launch)
+  Admin ........... 3 staff accounts with full admin access
+  Availability .... 99.9% target; zero-downtime releases
+  Budget .......... Not a constraint
+  Brand ........... phoenixskies.com; small phoenix bird logo; red palette
+  Build ........... DataQuaint builds the application and the platform
+
+==============================================================================
+ACTION ITEMS
+==============================================================================
+
+  DATAQUAINT
+  [ ] Send the Requirements & Scope document ........................ done
+  [ ] Send the product data Excel template .......................... done
+  [ ] Design the logo and brand colours .............................. done
+  [ ] Start SMS (DLT) registration for OTP login ............ week of 16 Nov
+  [ ] Architecture design ................................ starts 13 Nov
+
+  PHOENIX
+  [ ] Buy phoenixskies.com and share DNS access
+  [ ] Fill in the product template with images .......... by 18 Nov
+  [ ] Send the real GSTIN ................................ by 4 Dec
+
+==============================================================================
+                              END OF TRANSCRIPT
+==============================================================================
