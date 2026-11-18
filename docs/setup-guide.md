@@ -18,9 +18,9 @@ Everything runs in **Google Cloud Shell**, which needs nothing installed on your
 **c) phoenix-gitops:** go to Settings → Actions → General → Workflow permissions.
 - Choose **Read and write permissions**.
 - Tick **Allow GitHub Actions to create and approve pull requests**. The `promote` workflow needs this.
-- If either option is greyed out, enable it first at org level: `phoenix-skies` → Settings → Actions → General.
+- If either option is greyed out, enable it first at org level: `PhoenixGCP` → Settings → Actions → General.
 
-**d) Team for CODEOWNERS:** go to `phoenix-skies` → Teams → New team `release-managers` and add yourself.
+**d) Team for CODEOWNERS:** go to `PhoenixGCP` → Teams → New team `release-managers` and add yourself.
 
 **e) Branch protection on phoenix-gitops `main`:** go to Settings → Branches → Add rule.
 - Require a pull request before merging, with 1 approval and **Require review from Code Owners**.
@@ -38,14 +38,14 @@ git config --global user.email "you@example.com"
 git config --global credential.helper store      # paste the token as the password once
 
 for repo in phoenix-app phoenix-gitops phoenix-infra project_docs; do
-  rm -rf /tmp/$repo && git clone https://github.com/phoenix-skies/$repo.git /tmp/$repo
+  rm -rf /tmp/$repo && git clone https://github.com/PhoenixGCP/$repo.git /tmp/$repo
   cp -r $repo/. /tmp/$repo/
   (cd /tmp/$repo && git add -A && git commit -m "feat: Project Phoenix GitOps platform" && git push origin HEAD:main)
 done
 ```
 
 Pushing `phoenix-app` starts the **ci** workflow straight away, so watch its Actions tab. When it finishes:
-- `phoenix-skies` → **Packages** → `phoenix-backend` → Package settings → Change visibility → **Public**. Do the same for `phoenix-frontend`. GKE can then pull without credentials.
+- `PhoenixGCP` → **Packages** → `phoenix-backend` → Package settings → Change visibility → **Public**. Do the same for `phoenix-frontend`. GKE can then pull without credentials.
 - `phoenix-gitops` now has a PR called **deploy(dev): phoenix sha-…**. Leave it open for now.
 
 > If Trivy blocks the build on a brand-new CVE, set the repo variable `TRIVY_EXIT_CODE=0` (Settings → Variables). That makes the scan report-only. Re-run the job, and fix it properly later.

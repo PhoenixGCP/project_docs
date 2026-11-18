@@ -4,13 +4,13 @@
 
 This is the companion project for the **GitOps Mastery** 10-day programme.
 
-## Repositories (GitHub org `phoenix-skies`)
+## Repositories (GitHub org `PhoenixGCP`)
 
 | Repo | Purpose |
 |---|---|
-| [`phoenix-app`](https://github.com/phoenix-skies/phoenix-app) | Application source (storefront, product API), tests, Dockerfiles, CI |
-| [`phoenix-gitops`](https://github.com/phoenix-skies/phoenix-gitops) | Desired state: manifests, Kustomize, Helm, Argo CD, ApplicationSet |
-| [`phoenix-infra`](https://github.com/phoenix-skies/phoenix-infra) | Cluster and platform bootstrap scripts (GKE / kind) |
+| [`phoenix-app`](https://github.com/PhoenixGCP/phoenix-app) | Application source (storefront, product API), tests, Dockerfiles, CI |
+| [`phoenix-gitops`](https://github.com/PhoenixGCP/phoenix-gitops) | Desired state: manifests, Kustomize, Helm, Argo CD, ApplicationSet |
+| [`phoenix-infra`](https://github.com/PhoenixGCP/phoenix-infra) | Cluster and platform bootstrap scripts (GKE / kind) |
 | `project_docs` (this repo) | Architecture, course map, setup guide, runbook, demo script |
 
 ## Start here

@@ -41,7 +41,7 @@ flowchart LR
 
 1. **Developer commits code.** Feature branch → PR → merge to `main` on `phoenix-app`.
 2. **CI runs.** Unit tests, image build, Trivy scan (fails on fixable CRITICAL issues).
-3. **Image is published.** `ghcr.io/phoenix-skies/phoenix-backend:sha-abc1234`, and CI records the digest.
+3. **Image is published.** `ghcr.io/phoenixgcp/phoenix-backend:sha-abc1234`, and CI records the digest.
 4. **GitOps config is updated.** CI opens a PR on `phoenix-gitops` that sets `values-dev.yaml` to `sha-abc1234@sha256:…`.
 5. **Change is reviewed.** The `validate` workflow renders and schema-checks everything. Prod changes need CODEOWNERS approval.
 6. **Argo CD reconciles.** dev and qa auto-sync. Prod is synced manually by a release manager.
